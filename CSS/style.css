@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../FONTS/Montserrat.woff) format(woff);
+}
+
+@font-face {
+    font-family: Sacramento;
+    src: url(../FONTS/Sacramento.woff) format(woff);
+}
+
+h1 {
+    font-family: Sacramento;
+}
