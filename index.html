@@ -527,7 +527,7 @@
         </nav>
     </header>
 
-    <main>
+    <main> 
         <section id="inicio" class="hero-section text-center">
             <div class="container">
                 <h1 class="display-4 fw-bold mb-3">Ânima – Desenvolvimento e Psicologia</h1>
@@ -627,8 +627,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Janelas Flutuantes (Modais dos Serviços) -->
         <div class="modal fade" id="modalPsicoterapia" tabindex="-1" aria-labelledby="modalPsicoterapiaLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -863,7 +861,7 @@
                                         <textarea class="form-control" id="mensagem" rows="4" required placeholder="Como podemos te ajudar?"></textarea>
                                     </div>
 
-                                    <!-- RECAPTCHA WIDGET -->
+                                 
                                     <div class="col-12 my-3">
                                         <div class="recaptcha-box" id="recaptchaBox">
                                             <div class="recaptcha-checkbox-container" onclick="abrirDesafioCaptcha()">
@@ -958,12 +956,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Data Atual
         const hoje = new Date();
         const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
         document.getElementById('dataAtual').textContent = hoje.toLocaleDateString('pt-BR', opcoes);
-
-        // MÁSCARA DE TELEFONE AUTOMÁTICA Ex: (31) 90000-0000
         function mascaraTelefone(input) {
             let valor = input.value.replace(/\D/g, ""); // Remove tudo que não é dígito
             
@@ -987,7 +982,6 @@
             input.value = valor;
         }
 
-        // LÓGICA DO RECAPTCHA
         let captchaVerificado = false;
 
         function abrirDesafioCaptcha() {
@@ -1032,7 +1026,7 @@
                 document.getElementById('captchaCheck').style.display = 'block';
             } else {
                 alert('Verificação incorreta! Por favor, selecione os ícones corretos de saúde e bem-estar.');
-                itens.forEach(i => i.classList.remove('selected'));
+                itens.forEach(i => i.classList.remove('selected'));  
             }
         }
 
@@ -1047,8 +1041,7 @@
 
             alert('Mensagem enviada com sucesso! A equipe Ânima entrará em contato em breve.');
             document.getElementById('formContato').reset();
-            
-            // Resetar Captcha
+    
             captchaVerificado = false;
             document.getElementById('captchaCheck').style.display = 'none';
             document.getElementById('captchaSquare').style.borderColor = '#c1c1c1';
